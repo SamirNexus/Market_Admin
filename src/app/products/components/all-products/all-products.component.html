@@ -1,0 +1,71 @@
+
+
+ 
+ 
+  <div class="box border cartBox">
+   <button class="btn btn-success"data-toggle="modal" data-target="#viewCart">Add Product</button>
+   <div class="cartBox">
+   <table class="table table-striped  ">
+   <thead>
+  <tr class="text-center"  >
+    <th ></th>
+     <th>Product Name</th>
+     <th>Category</th>
+     <th>Price</th>
+     <th></th>
+  </tr>
+</thead>
+ <tbody>
+  <tr *ngFor= "let item of products; let i = index" >
+    <td><img src="{{item.image}}" alt=""></td>
+    <td>{{item.title}}</td>
+    <td  >{{item.category}}</td>
+    <td>{{item.price}} L.E</td>
+    <button class="btn btn-danger "data-toggle="modal" data-target="#viewCart" (click)="update(item)">Update</button>
+
+  </tr>
+</tbody>
+ </table>
+</div>
+<div class="modal fade" id="viewCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered "style="max-width: 900px!important;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="exampleModalLabel">Add product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+       </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" >
+          <div class="row">
+           <div class="col-md-4 col-sm-12">
+             <label for="title">title :</label>
+             <input type="text" name="image"  formControlName="title"   class="form-control" placeholder="title" >
+           </div>
+           <div class="col-md-4 col-sm-12">
+            <label for="">price :</label>
+            <input type="number"formControlName="price" class="form-control"placeholder ="price">
+           </div>
+           <div class="col-md-4 col-sm-12">
+            <app-select [data]= "categorise" [title]="'Categorise'" (selectedValue) ="getselectedCategory($event)"[all]="false" [select]="form.value.category" ></app-select>
+           </div>
+           <div class="col-md-4 col-sm-12">
+             <label for="image">image :</label>
+             <img src="{{base64}}" alt="">
+             <input type="file" class="form-control" (change)="getImagePath($event)">
+           </div>
+           <div class="col-md-8 col-sm-12">
+          <label for="image">Description :</label>
+          <textarea type="text" class="form-control" formControlName="description" placeholder="type here .."></textarea>
+           </div>
+          </div>
+          <div class="d-flex justify-content-end mt-3">
+          <button class="btn btn-success" [disabled]="!form.valid"     (click)="addProduct()">Add product</button>
+          </div>
+        </form>
+      </div>
+      </div>
+      </div>
+      </div>
+

@@ -1,0 +1,22 @@
+<div class="box">
+    <div class="row d-flex"*ngIf= "loading">
+        <div class="col-md-5 col-sm-12">
+            <img src="{{data.image}}" alt="sas">
+        </div>
+        <div class="col-md-7 col-sm-12">
+        <div class="info">
+            <ul class="list-unstyled">
+                <li><strong class=" bg-danger-subtle">Title </strong>: {{data.title}}</li>
+                <li><strong class=" bg-danger-subtle " >Category </strong>: {{data.category}}</li>
+                <li><strong class=" bg-danger-subtle">Description </strong>: {{data.description}}</li>
+                <li><strong class=" bg-danger-subtle">Rate </strong>: {{data.rating.rate}}</li>
+                <li><strong class=" bg-danger-subtle">count </strong>: {{data.rating.count}}</li>
+                <li><strong class=" bg-danger-subtle">price </strong>: {{data.price}} L.E</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+    <app-spinner *ngIf= "!loading"></app-spinner>
+</div>
+</div>
