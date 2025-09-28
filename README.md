@@ -1,27 +1,70 @@
-# App
+# 🏬 Market_Admin – Admin Dashboard for Market App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+**Market_Admin** is the administrative dashboard for the Market e-commerce app, built using **Angular**. It allows admins to manage products, orders, and users through a modern interface.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🌟 Key Features
 
-## Code scaffolding
+- ✅ Admin login and authentication  
+- ✅ Product management (create, update, delete)  
+- ✅ Order management and tracking  
+- ✅ User management (view, ban, edit roles)  
+- ✅ Responsive layout – admin usable from desktop and mobile  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🛠️ Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Angular CLI** – front-end framework  
+- **TypeScript** – typed JavaScript  
+- **HTML5** – content structure  
+- **CSS3 / SCSS** – styling  
+- MAY include libraries like **NgRx**, **Angular Material**, etc.  
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📂 Project Structure
 
-## Running end-to-end tests
+Market_Admin/
+┣ src/ # Source code files (components, services, etc.)
+┣ .editorconfig # Editor configuration
+┣ .gitignore # Files/folders to ignore in Git
+┣ angular.json # Angular project configuration
+┣ package.json # Project dependencies & scripts
+┣ tsconfig.json # TypeScript config
+┣ tsconfig.app.json # TS config for app part
+┣ tsconfig.spec.json # TS config for tests
+┗ README.md # This file
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## 📥 How to Use / Run
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/SamirNexus/Market_Admin.git
+Install dependencies:
+
+cd Market_Admin
+npm install
+Run the dev server:
+
+
+ng serve
+Then open your browser to:
+http://localhost:4200/
+
+The app will reload if you make changes to source files
+
+🧪 Running Tests
+To run unit tests:
+
+
+ng test
+🚀 Author
+SamirNexus – Software Engineer & Web Developer
+GitHub: https://github.com/SamirNexus
